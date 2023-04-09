@@ -8,10 +8,11 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: jickylive/vue-source@master
       env:
         ACCESS_TOKEN: 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
-        TARGET_REPO: username/repo
-        TARGET_BRANCH: master
+        TARGET_REPO: jickylive/vue
+        TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: blog/.vuepress/dist/
+        BUILD_DIR: docs/.vuepress/public/
+        COMMIT_MESSAGE:  Auto deploy by the Vuepress-deploy
